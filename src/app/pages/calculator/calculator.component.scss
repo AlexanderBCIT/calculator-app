@@ -1,0 +1,83 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+.app-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+:host ::ng-deep .calculator-card {
+  width: 100%;
+  max-width: 360px;
+  border-radius: 24px !important;
+  border: 1px solid #b2dfdb;
+  box-shadow: 0 8px 32px rgba(72, 187, 170, 0.18);
+  background: #ffffff;
+
+  .p-card-body { padding: 1.5rem; }
+}
+
+.display {
+  background: linear-gradient(135deg, #e0f7f4, #e8f5e9);
+  border-radius: 16px;
+  padding: 1.5rem 1.25rem;
+  margin-bottom: 1.25rem;
+  text-align: right;
+  overflow: hidden;
+
+  .display-text {
+    font-size: 2.75rem;
+    font-weight: 600;
+    color: #1a6e64;
+    word-break: break-all;
+    line-height: 1;
+  }
+}
+
+.button-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.65rem;
+}
+
+:host ::ng-deep .btn {
+  width: 100%;
+  height: 60px;
+  border-radius: 16px !important;
+  font-size: 1.3rem !important;
+  font-weight: 600 !important;
+  border: none !important;
+  transition: transform 0.1s, opacity 0.2s;
+
+  &:active { transform: scale(0.95); }
+}
+
+:host ::ng-deep .btn-number {
+  background: #f1f8f6 !important;
+  color: #1a6e64 !important;
+
+  &:hover { background: #e0f2ef !important; }
+}
+
+:host ::ng-deep .btn-function {
+  background: linear-gradient(135deg, #81c784, #64d8cb) !important;
+  color: #fff !important;
+
+  &:hover { opacity: 0.9 !important; }
+}
+
+:host ::ng-deep .btn-operator {
+  background: linear-gradient(135deg, #4fb3a9, #66bb6a) !important;
+  color: #fff !important;
+
+  &:hover { opacity: 0.9 !important; }
+}
+
+:host ::ng-deep .btn-equals {
+  background: linear-gradient(135deg, #2e7d6e, #43a047) !important;
+  color: #fff !important;
+
+  &:hover { opacity: 0.9 !important; }
+}
